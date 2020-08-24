@@ -1,0 +1,14 @@
+<mat-card class="product-card mat-elevation-z5">
+    <img mat-card-image src="{{product.picture}}">
+    <mat-card-header>
+        <mat-card-title (click)="onTitleClick(product._id)">{{product.title}}</mat-card-title>
+        <mat-card-subtitle>
+          <p>{{product.price | currency: 'USD' : 'symbol'}}</p>
+          <p *ngIf="product.stock > 0" style="color: green;">In Stock: {{product.stock}}</p>
+          <p *ngIf="product.stock <= 0" style="color: red;">Out of Stock</p>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+      <add-to-cart [product]="product" class="cart-add-btn"></add-to-cart>
+    </mat-card-actions>
+  </mat-card>
