@@ -1,0 +1,15 @@
+table{
+    width: 100%;
+}
+tr {
+    background: lightgray;
+}
+th {
+    text-align: left;
+}
+th.title {
+    width: 30%;
+}
+th.value {
+    width: 70%;
+}

@@ -1,0 +1,17 @@
+<table *ngIf="items.length > 0">
+    <tr>
+        <th class="title"><h3>Subtotal</h3></th>
+        <th class="value"><h3>{{getTotal() | currency:'USD':'symbol'}}</h3></th>
+    </tr>
+    <tr>
+        <th class="title"><h3>Shipping</h3></th>
+        <th class="value">
+            <h3>Free Shipping <br>
+                Shipping address will be updated during checkout</h3>
+        </th>
+    </tr>
+    <tr>
+        <th class="title"><h3>Total</h3></th>
+        <th class="value"><h3>{{getTotal() | currency:'USD':'symbol'}}</h3></th>
+    </tr>
+</table>
