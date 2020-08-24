@@ -14,7 +14,7 @@
                         <mat-card-title>{{product?.title}}</mat-card-title>
                         <mat-card-subtitle>
                             <p>{{product?.price | currency: 'USD' : 'symbol'}}</p>
-                            <p *ngIf="product?.stock > 0" style="color: green;">In Stock: {{product.stock}}</p>
+                            <p *ngIf="product?.stock > 0" style="color: green;">In Stock: {{product?.stock}}</p>
                             <p *ngIf="product?.stock <= 0" style="color: red;">Out of Stock</p>
                         </mat-card-subtitle>
                         </mat-card-header>
