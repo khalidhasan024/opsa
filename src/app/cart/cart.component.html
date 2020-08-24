@@ -1,0 +1,12 @@
+<div class="container">
+    <mat-toolbar>
+        <span>Cart</span>
+        <button mat-stroked-button color="primary" routerLink="/">Back to Home</button>
+    </mat-toolbar>
+    <div class="cart-table-area">
+        <cart-table [cartItems]="items"></cart-table>
+    </div>
+    <div class="cart-total-area">
+        <cart-total [cartItems]="items"></cart-total>
+    </div>
+</div>

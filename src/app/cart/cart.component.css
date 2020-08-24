@@ -1,0 +1,16 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+.cart-table-area {
+    padding: 10px;
+}
+.cart-total-area {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    padding: 10px;
+}
+cart-total {
+    width: 50%;
+}
