@@ -1,0 +1,19 @@
+<div class="container">
+    <div>
+        <mat-toolbar>
+            <span>SHOP</span>
+        </mat-toolbar>
+        <div class="sort-area">
+            <sort-input (sortingChange)="onSortingChange($event)"></sort-input>
+        </div>
+        <div class="product-area">
+          <product-card *ngFor="let product of products" 
+            [product]="product" 
+            (titleClick)="onCardTitleClick($event)"
+            class="product-card"></product-card>
+        </div>
+    </div>
+    <div class="cart-area">
+        <small-cart></small-cart>
+    </div>
+</div>
