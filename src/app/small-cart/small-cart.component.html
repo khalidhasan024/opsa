@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+    <span>Cart</span>
+</mat-toolbar>
+<div class="small-cart-area" *ngIf="items.length > 0">
+    <mat-card class="cart-item-card mat-elevation-z10" *ngFor="let item of items">
+        <mat-card-header>
+            <mat-card-subtitle>{{item.product.title}}</mat-card-subtitle>
+            <div mat-card-avatar
+                [style.backgroundImage]="'url('+ item.product.picture +')'"
+                [style.backgroundSize]="'cover'">
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{item.number}} X {{item.product.price | currency:'USD':'symbol'}}</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-toolbar>
+        <span>Subtotal: {{getSubTotal() | currency:'USD':'symbol'}}</span>
+    </mat-toolbar>
+    <button mat-raised-button color="primary" (click)="onViewCartClick()">View Cart</button>
+    &nbsp;&nbsp;
+    <button mat-raised-button color="primary">Checkout</button>
+</div>
+  
