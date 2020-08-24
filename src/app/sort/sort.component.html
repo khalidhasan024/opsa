@@ -1,0 +1,7 @@
+<mat-form-field appearance="outline" style="width: 300px;">
+    <mat-select value="default" (selectionChange)="onSortChange($event.value)">
+        <mat-option value="default">Default Sorting</mat-option>
+        <mat-option value="h2l">Sort by price: High to Low</mat-option>
+        <mat-option value="l2h">Sort by price: Low to High</mat-option>
+    </mat-select>
+</mat-form-field>
