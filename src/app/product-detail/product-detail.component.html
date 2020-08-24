@@ -1,0 +1,38 @@
+<div class="container">
+    <div>
+        <mat-toolbar>
+            <span>Product : {{product?.title}}</span>
+        </mat-toolbar>
+        <div class="product-area">
+            <div class="overview-area">
+                <div class="image">
+                    <img src="{{product?.picture}}" alt="{{product?.title}}">
+                </div>
+                <div class="overview">
+                    <mat-card class="overview-card mat-elevation-z0">
+                        <mat-card-header>
+                        <mat-card-title>{{product?.title}}</mat-card-title>
+                        <mat-card-subtitle>
+                            <p>{{product?.price | currency: 'USD' : 'symbol'}}</p>
+                            <p *ngIf="product?.stock > 0" style="color: green;">In Stock: {{product.stock}}</p>
+                            <p *ngIf="product?.stock <= 0" style="color: red;">Out of Stock</p>
+                        </mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-actions>
+                            <button mat-stroked-button color="primary" routerLink = "/">Back</button>
+                            &nbsp;&nbsp;
+                            <add-to-cart [product]="product"></add-to-cart>
+                        </mat-card-actions>
+                    </mat-card>                  
+                </div>
+            </div>
+            <div class="description-area">
+                <h3>Description</h3>
+                <p>{{product?.description}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="cart-area">
+        <small-cart></small-cart>
+    </div>
+</div>
