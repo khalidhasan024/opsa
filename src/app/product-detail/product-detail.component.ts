@@ -26,13 +26,18 @@ export class ProductDetailComponent implements OnInit {
             this.filterCartProduct();
           })
       )
+    this._cartService.cartAddItemAction$
+          .subscribe(p => p._id === this.product._id ? this.product.stock-- : this.product)
+
   }
 
-  // onAddClick(): void {
-  //   this._cartService.setItem(this.product);
-  //   this.product.stock--;
-  // }
 
+  getClasses() {
+    return {
+      class2: true,
+      class3: true
+    }
+  }
   private filterCartProduct(): void {
     let cartItems = this._cartService.getItems();
     for(let item of cartItems) {

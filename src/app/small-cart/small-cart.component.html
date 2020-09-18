@@ -17,7 +17,8 @@
     <mat-toolbar>
         <span>Subtotal: {{getSubTotal() | currency:'USD':'symbol'}}</span>
     </mat-toolbar>
-    <button mat-raised-button color="primary" (click)="onViewCartClick()">View Cart</button>
+    <button mat-raised-button color="primary" routerLink="/cart">View Cart</button>
+    <!-- <button mat-raised-button color="primary" (click)="onViewCartClick()">View Cart</button> -->
     &nbsp;&nbsp;
     <button mat-raised-button color="primary">Checkout</button>
 </div>

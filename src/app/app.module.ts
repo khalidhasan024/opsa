@@ -8,11 +8,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 import { ProductService } from './core/product.service'
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { TestPipe } from './shared/test.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TestPipe
   ],
   imports: [
     BrowserModule,
